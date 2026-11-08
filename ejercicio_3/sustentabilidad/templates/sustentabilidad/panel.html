@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Panel de Sustentabilidad - EcoTech Solutions</title>
+    <style>
+        body { font-family: sans-serif; margin: 40px; background-color: #f7f9fa; color: #333; }
+        .card { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); margin-bottom: 20px; }
+        table { width: 100%; border-collapse: collapse; margin-top: 15px; }
+        th, td { padding: 12px; text-align: left; border-bottom: 1px solid #ddd; }
+        th { background-color: #2e7d32; color: white; }
+        .badge { background: #e8f5e9; color: #2e7d32; padding: 4px 8px; border-radius: 4px; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <h1>EcoTech Solutions - Panel de Sustentabilidad</h1>
+
+    <div class="card">
+        <h2>Resumen Operativo</h2>
+        <p><strong>Emisiones Totales:</strong> <span class="badge">{{ total_emisiones }} kgCO2e</span></p>
+        <p><strong>Planta de Mayor Consumo:</strong> <strong>{{ planta_mayor_consumo }}</strong></p>
+    </div>
+
+    <div class="card">
+        <h2>Detalle por Planta Industrial</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Planta</th>
+                    <th>Huella de Carbono (kgCO2e)</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for planta, emisiones in detalle_emisiones.items %}
+                <tr>
+                    <td>{{ planta }}</td>
+                    <td>{{ emisiones }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

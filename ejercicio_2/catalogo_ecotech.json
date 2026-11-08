@@ -1,0 +1,30 @@
+[
+    {
+        "codigo": "P1",
+        "nombre": "Panel Solar 1",
+        "precio": 500,
+        "_stock": 10,
+        "potencia": 1000,
+        "eficiencia": 0.8
+    },
+    {
+        "codigo": "P2",
+        "nombre": "Panel Solar 2",
+        "precio": 600,
+        "_stock": 15,
+        "potencia": 1200,
+        "eficiencia": 0.9
+    },
+    {
+        "codigo": "P3",
+        "nombre": "Controlador de Carga 1",
+        "precio": 700,
+        "_stock": 20
+    },
+    {
+        "codigo": "P4",
+        "nombre": "Entrada de Energia 1",
+        "precio": 800,
+        "_stock": 25
+    }
+]
